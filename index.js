@@ -29,7 +29,9 @@ app.use(express.static(path.join(__dirname,'public')));
 // })
 
 app.use('/api',routes)
-
+app.use('/use',(req,res)=>{
+    res.send("hello")
+})
 //listen port
 app.listen(process.env.PORT||port,()=>{
     console.log(`Port ${port}`)
