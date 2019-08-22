@@ -18,19 +18,19 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(express.static(path.join(__dirname,'public')));
 
-mongoose.connection.openUri('mongodb://localhost:27017/reservation',{useNewUrlParser:true});
-mongoose.connection.on('connected',() => {
-    console.log("connected to db")
-})
-mongoose.connection.on('error',(err)=>{
-    if(err){
-        console.log(`Conenction failed ${err}`)
-    }
-})
+// mongoose.connection.openUri('mongodb://localhost:27017/reservation',{useNewUrlParser:true});
+// mongoose.connection.on('connected',() => {
+//     console.log("connected to db")
+// })
+// mongoose.connection.on('error',(err)=>{
+//     if(err){
+//         console.log(`Conenction failed ${err}`)
+//     }
+// })
 
 app.use('/api',routes)
 
 //listen port
-app.listen(port,()=>{
+app.listen(process.env.PORT||port,()=>{
     console.log(`Port ${port}`)
 })
