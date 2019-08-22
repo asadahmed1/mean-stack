@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.use('/api',routes)
 app.use('/use',(req,res)=>{
-    res.send("hello")
+    res.send("hello again")
 })
 //listen port
 app.listen(process.env.PORT||port,()=>{
