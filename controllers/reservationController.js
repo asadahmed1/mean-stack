@@ -59,7 +59,7 @@ const getone=(req,res)=>{
     })
   }
 
-  //update reservation
+  //update reservations
   const updatereservation=(req,res)=>{
     reservationSchema.findByIdAndUpdate(req.body.id,req.body.reserve,{new:true},(err,result)=>{
       if(err){
@@ -87,6 +87,9 @@ const getone=(req,res)=>{
         })
       }
     })
+  }
+  const test = (req,res)=>{
+      
   }
 module.exports = {
     reservation,
