@@ -5,8 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js"
+    
+      "build": {
+        "env": {
+          "VARIABLE_NAME": "@secret-name"
+        }
+      },
+    
+    "start":"node index.js" 
   },
+  
+  "build": {
+    
+    "env": {
+      "VARIABLE_NAME": "@secret-name"
+    }
+  },
+
+ 
   "engines":{
     "node":">=v10.16.0",
     "npm":">=6.9.0"
