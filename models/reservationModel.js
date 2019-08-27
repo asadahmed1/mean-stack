@@ -14,11 +14,11 @@ const reservationSchema =mongoose.Schema({
         require: true
     },
     arrivaldate: { 
-        type: Date, 
+        type: String, 
         require:true
      },
     depraturedate: { 
-        type: Date, 
+        type: String, 
         require:true
         
      },
