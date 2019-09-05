@@ -1,4 +1,5 @@
 const reservationSchema = require('../models/reservationModel')
+const bcrypt = require('node-bcrypt')
 
 const reservation = (req,res, next) => {
 
