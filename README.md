@@ -50,3 +50,5 @@ localhost:5000/api/reservationss
         "roomtype": "Family"
 	}
 }
+# Front-End Calculator
+http://localhost:4200/
